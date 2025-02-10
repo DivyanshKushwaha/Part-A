@@ -2,6 +2,8 @@
 
 This project extracts tasks, deadlines, and responsible entities from unstructured text using **Natural Language Processing (NLP)**. The system processes text using **spaCy** and **NLTK**, identifying tasks based on specific keywords, extracting deadlines, categorizing tasks, and structuring them into an easy-to-read format.
 
+![alt text](image.png)
+
 ---
 
 ## 🚀 Features  
