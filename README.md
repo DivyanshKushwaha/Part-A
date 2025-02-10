@@ -25,6 +25,34 @@ git clone https://github.com/yourusername/task-extraction-nlp.git
 pip install -r requirements.txt
 ```
 
-### 
+### 3️⃣ Download NLP models
+```bash
+import nltk
+nltk.download("stopwords")
 
+```
 
+## 🚀 How it works  
+- **Preprocess Text** – Cleans text by removing punctuation, converting to lowercase, and filtering stopwords.
+- **Sentence Segmentation** – Uses spaCy to break text into sentences.
+- **Task Extraction** – Identifies sentences with task-related keywords (must, should, needs to).
+- **Entity Recognition** – Extracts the responsible person using Named Entity Recognition (NER).
+- **Deadline Detection** – Identifies dates and deadline-related words (before, by, until).
+- **Task Categorization** – Assigns a category based on predefined keywords.
+
+## 🖥 Run the Flask App
+```bash
+python app.py
+```
+
+## 🔬 Core NLP Techniques
+- **Text Preprocessing** – Removes special characters, converts to lowercase, and filters stopwords.
+- **Named Entity Recognition (NER)** – Extracts people, dates, and times using spaCy.
+- **Dependency Parsing** – Identifies subjects (who is responsible for the task).
+- **Regex Matching** – Detects deadline-related phrases (by, before, until).
+- **Keyword Matching** – Classifies tasks into predefined categories.
+
+## 📝 Challenges & Insights
+- **Handling Pronouns**: If a task refers to "he/she/they," the script links it to the last known subject.
+- **Deadlines with Ambiguous Dates**: Some phrases like "next Monday" require extra processing.
+- **Categorization Limitations**: The current system uses keyword matching, which can be improved with machine learning-based classification.
